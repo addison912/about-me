@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  height: 5000px;
+  font-family: "Josefin Sans", sans-serif;
+  color: #333;
+}
+body p {
+  font-size: 24px;
+}
+
+a {
+  cursor: pointer;
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+header {
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  width: 100vw;
+  height: 8vh;
+  align-items: center;
+}
+nav ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin: 0;
+  justify-content: space-evenly;
+  align-content: center;
+  text-transform: uppercase;
+}
+nav li {
+  width: 100%;
+}
+nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease-in-out;
+}
+nav a:hover {
+  background: whitesmoke;
+  color: black;
+  transition: 0.5s ease-in-out;
+}
+
+main {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+#scroll-main {
+  position: fixed;
+}
+
+.scroll-block {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding: 100px;
+}
+
+#about {
+  left: 0;
+  top: 0;
+  background: #ff703c;
+}
+#about img {
+  border-radius: 50%;
+  border: 2px solid whitesmoke;
+  height: 55vh;
+}
+#about p {
+  padding-right: 5vw;
+}
+
+#skills {
+  left: 0;
+  top: 100vh;
+  background: #2c8fff;
+}
+
+#experience {
+  left: 100vw;
+  top: 100vh;
+  background: #fff388;
+}
+
+#testimonials {
+  left: 100vw;
+  top: 200vh;
+  background: #ff88ef;
+}
+
+#portfolio {
+  left: 200vw;
+  top: 200vh;
+  background: #88fff9;
+}
+
+#contact {
+  left: 200vw;
+  top: 300vh;
+  background: #84ff6b;
+}
+
+footer {
+  background: black;
+}
+
+/*# sourceMappingURL=main.css.map */
