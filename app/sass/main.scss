@@ -17,7 +17,7 @@ body {
 
 a {
   cursor: pointer;
-  color: whitesmoke;
+  color: #000;
   text-decoration: none;
 }
 
@@ -27,7 +27,6 @@ ul {
 }
 
 header {
-  background: black;
   position: fixed;
   top: 0;
   left: 0;
@@ -36,34 +35,74 @@ header {
 
 nav {
   display: flex;
+  justify-content: space-between;
   width: 100vw;
   height: 8vh;
   align-items: center;
-  ul {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    margin: 0;
-    justify-content: space-evenly;
-    align-content: center;
-    text-transform: uppercase;
-  }
+}
+#menu {
+  width: 64vw;
+  height: 100%;
+  display: flex;
+  margin: 0;
+  align-content: center;
+  text-transform: uppercase;
+  font-size: 16px;
   li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
   }
   a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 6vh;
     transition: 0.5s ease-in-out;
+    border-radius: 10px;
   }
   a:hover {
-    background: whitesmoke;
+    background: #ddd;
     color: black;
     transition: 0.5s ease-in-out;
   }
+}
+#branded-name {
+  font-family: "Rubik", sans-serif;
+  color: #e04531;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 1px 1px #ccc;
+  font-weight: 900;
+  font-size: 20px;
+  height: 6vh;
+  width: 18vw;
+  margin: 0 1vh;
+  text-transform: uppercase;
+  background-color: #333;
+  border-radius: 10px;
+  min-width: 200px;
+  transition: 0.2s ease-in-out;
+  span {
+    font-size: 23px;
+    transition: 0.2s ease-in-out;
+  }
+}
+#branded-name:hover {
+  cursor: pointer;
+  font-size: 23px;
+  span {
+    font-size: 26px;
+    transition: 0.2s ease-in-out;
+  }
+  transition: 0.2s ease-in-out;
+}
+
+#hamburger-menu {
+  display: none;
 }
 
 main {
@@ -73,6 +112,7 @@ main {
 .row {
   display: flex;
   flex-direction: row;
+  height: 100%;
 }
 
 #scroll-main {
@@ -85,27 +125,49 @@ main {
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  padding: 100px;
+  padding: 100px 100px 0 100px;
+  p {
+    font-size: 1.5em;
+  }
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #about {
   left: 0;
   top: 0;
-  background: rgb(255, 112, 60);
-  img {
-    border-radius: 50%;
-    border: 2px solid whitesmoke;
-    height: 55vh;
-  }
+  background-image: linear-gradient(to bottom right, #ff6883, yellow);
   p {
     padding-right: 5vw;
+    max-height: 50%;
   }
 }
-
+#pic-me {
+  border-radius: 50%;
+  border: 2px solid whitesmoke;
+  height: 40vh;
+}
+#computer-pic {
+  height: 32vh;
+  width: 32vh;
+  justify-self: flex-end;
+  margin-top: 4vh;
+}
+#computer-pic:hover {
+  cursor: pointer;
+}
 #skills {
   left: 0;
   top: 100vh;
-  background: rgb(44, 143, 255);
+  color: white;
+  background-image: url("../../docs/images/screen-shot1.png");
+  background-size: cover;
+  background-position: center;
+  background-position-y: 0;
 }
 
 #experience {
@@ -134,4 +196,14 @@ main {
 
 footer {
   background: black;
+}
+
+@media only screen and (max-width: 1080px) {
+  #menu {
+    display: none;
+  }
+  #hamburger-menu {
+    top: 10px;
+    right: 10px;
+  }
 }
