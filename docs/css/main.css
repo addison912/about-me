@@ -141,7 +141,9 @@ main {
 #about {
   left: 0;
   top: 0;
-  background-image: linear-gradient(to bottom right, #ff6883, yellow);
+  background-size: 1000% 1000%;
+  background-image: radial-gradient(yellow, #ff6883, #2b8fff);
+  animation: gradientBackground 30s infinite ease-in-out;
 }
 #about p {
   padding-right: 5vw;
@@ -203,6 +205,23 @@ footer {
   background: black;
 }
 
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 100%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+  75% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
 @media only screen and (max-width: 1080px) {
   #menu {
     display: none;
