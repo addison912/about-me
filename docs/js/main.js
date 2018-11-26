@@ -37,8 +37,17 @@ document.querySelectorAll("#menu>li>a").forEach(function(link) {
     $("html,body").animate({ scrollTop: sectionPosition(id) }, "slow");
   });
 });
+document.querySelectorAll("#hamburger-menu>li>a").forEach(function(link) {
+  let id = link.getAttribute("href");
+  link.addEventListener("click", function() {
+    $("html,body").animate({ scrollTop: sectionPosition(id) }, "slow");
+  });
+});
 $("#branded-name").click(function() {
   $("html,body").animate({ scrollTop: 0 }, "slow");
+});
+$("#computer-pic").click(function() {
+  $("html,body").animate({ scrollTop: sectionPosition($("#contact")) }, "slow");
 });
 
 $(document).on({
@@ -109,3 +118,13 @@ function switchScroll() {
       break;
   }
 }
+
+// toggle dropdown menu
+$("#hamburger-icon").click(function() {
+  $("#hamburger-menu").slideToggle("slow");
+  $("#menu>li>a").css({ background: (0, 0, 0, 0), color: "#ddd" });
+  $("header").css({
+    background: "black",
+    transition: ".4s ease-in-out"
+  });
+});

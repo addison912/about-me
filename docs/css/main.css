@@ -22,6 +22,7 @@ a {
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 header {
@@ -102,8 +103,30 @@ nav {
   transition: 0.2s ease-in-out;
 }
 
-#hamburger-menu {
+#hamburger-icon {
   display: none;
+}
+
+#hamburger-menu {
+  flex-direction: column;
+  min-width: 33.33%;
+  right: 0;
+  top: 8vh;
+  background: #ddd;
+  border-radius: 0 0 10px 10px;
+  position: fixed;
+  padding: 10px;
+  display: none;
+}
+#hamburger-menu li {
+  display: flex;
+  align-items: center;
+  height: 2em;
+  border-radius: 10px;
+  padding: 0 7px;
+}
+#hamburger-menu li:hover {
+  background: whitesmoke;
 }
 
 main {
@@ -121,29 +144,35 @@ main {
 }
 
 .scroll-block {
+  width: 100vw;
+  height: 100vh;
   position: absolute;
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-  padding: 100px 100px 0 100px;
+  padding: 60px 5vw 0 5vw;
+  overflow: scroll;
 }
 .scroll-block p {
   font-size: 1.5em;
 }
 
-.images {
+article h1 {
+  font-size: 2em;
+}
+
+.about-images {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 #about {
   left: 0;
   top: 0;
   background-size: 1000% 1000%;
-  background-image: radial-gradient(yellow, #ff6883, #2b8fff);
-  animation: gradientBackground 30s infinite ease-in-out;
+  background-image: radial-gradient(#ece472, #ff6883, #2b8fff);
+  animation: gradientBackground 45s infinite ease-in-out;
 }
 #about p {
   padding-right: 5vw;
@@ -157,24 +186,58 @@ main {
 }
 
 #computer-pic {
-  height: 32vh;
-  width: 32vh;
+  height: 12vh;
+  width: 12vh;
   justify-self: flex-end;
   margin-top: 4vh;
+  transition: ease-in-out 0.3s;
+  margin: 20px 0;
 }
 
 #computer-pic:hover {
   cursor: pointer;
+  height: 20vh;
+  width: 20vh;
+  transition: ease-in-out 0.3s;
 }
 
 #skills {
   left: 0;
   top: 100vh;
-  color: white;
-  background-image: url("../../docs/images/screen-shot1.png");
+  color: whitesmoke;
+  background: #333;
   background-size: cover;
   background-position: center;
   background-position-y: 0;
+}
+
+.skills {
+  justify-content: space-evenly;
+}
+
+.skill {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+  line-height: 1.5;
+  font-weight: 700;
+  color: whitesmoke;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  width: 10vh;
+  padding: 1vh 2vh;
+  margin: 10px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.icon img {
+  width: 100%;
+  margin: auto;
 }
 
 #experience {
@@ -227,9 +290,22 @@ footer {
     display: none;
   }
 
-  #hamburger-menu {
+  #hamburger-icon {
+    display: block;
     top: 10px;
-    right: 10px;
+    margin-right: 16px;
+  }
+
+  #hamburger-icon:hover {
+    cursor: pointer;
+  }
+
+  #about .row {
+    flex-direction: column;
+  }
+
+  .about-images {
+    justify-content: flex-start;
   }
 }
 
