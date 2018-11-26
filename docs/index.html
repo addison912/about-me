@@ -18,7 +18,7 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="top-nav">
         <div id="branded-name">
           <div><span>A</span>ddison <span>M</span>oore</div>
         </div>
@@ -45,7 +45,7 @@
     <main>
       <div id="scroll-main">
         <section id="about" class="scroll-block">
-          <div class="row">
+          <div class="flex-row">
             <article>
               <h1>Addison Moore</h1>
               <h2>Full Stack Developer | Product Designer</h2>
@@ -83,7 +83,7 @@
         </section>
         <section id="skills" class="scroll-block">
           <h2>SKILLS</h2>
-          <div class="skills row">
+          <div class="skills flex-row">
             <ul>
               <li class="skill">
                 <div class="icon"><img src="images/JS.png" /></div>
@@ -143,28 +143,118 @@
           </p>
         </section>
         <section id="portfolio" class="scroll-block">
-          <h2>PORTFOLIO</h2>
-          <p>
-            esse sed blanditiis earum recusandae soluta! Ab inventore ipsam,
-            beatae ipsa a harum. Consequuntur sed soluta perspiciatis itaque
-            facere perferendis exercitationem dolore praesentium quod est
-            accusamus voluptatem ipsa eius minima, cumque molestiae doloremque
-            tempore ea, iste iure voluptates. Possimus rerum voluptas
-            repudiandae amet temporibus perferendis quam, facere molestias at
-            aliquam eum quisquam odio, laborum harum? Magni dolor suscipit
-            repellat voluptate libero.
-          </p>
+          <div class="carousel-buttons">
+            <div class="left"><</div>
+            <div class="right">></div>
+          </div>
+          <div id="portfolio-carousel" class="carousel">
+            <div class="carousel-item portfolio-item">
+              <img
+                src="images/Monument.png"
+                alt="Monument Blog Site"
+                class="portfolio-img"
+              />
+              <div class="portfolio-description">
+                <h4>Monument Blog Site</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Culpa nam dolor dignissimos fuga libero repellat sunt ad,
+                  reprehenderit veritatis, ut vero et. Quis modi unde corporis
+                  excepturi autem iste sapiente quisquam sequi dicta sed nam
+                  enim, suscipit accusantium temporibus impedit.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item portfolio-item">
+              <img
+                src="images/ChickenFight.png"
+                alt="Family Guy Chicken Fight Game"
+                class="portfolio-img"
+              />
+              <div class="portfolio-description">
+                <h4>Chicken Fight Game</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Culpa nam dolor dignissimos fuga libero repellat sunt ad,
+                  reprehenderit veritatis, ut vero et. Quis modi unde corporis
+                  excepturi autem iste sapiente quisquam sequi dicta sed nam
+                  enim, suscipit accusantium temporibus impedit.
+                </p>
+                <a href="https://addison912.github.io/Family-Guy-Chicken-Fight/"
+                  >Click here to play!</a
+                >
+              </div>
+            </div>
+            <div class="carousel-item portfolio-item">
+              <img
+                src="images/Billiken.png"
+                alt="Billiken Homepage"
+                class="portfolio-img"
+              />
+              <div class="portfolio-description">
+                <h4>Hompage Application</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Culpa nam dolor dignissimos fuga libero repellat sunt ad,
+                  reprehenderit veritatis, ut vero et. Quis modi unde corporis
+                  excepturi autem iste sapiente quisquam sequi dicta sed nam
+                  enim, suscipit accusantium temporibus impedit.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item portfolio-item">
+              <img
+                src="images/EmporiumOfCuriosities.png"
+                alt="Emporium Of Curiosities"
+                class="portfolio-img"
+              />
+              <div class="portfolio-description">
+                <h4>Emporium of Curiosities</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Culpa nam dolor dignissimos fuga libero repellat sunt ad,
+                  reprehenderit veritatis, ut vero et. Quis modi unde corporis
+                  excepturi autem iste sapiente quisquam sequi dicta sed nam
+                  enim, suscipit accusantium temporibus impedit.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item portfolio-item">
+              <img
+                src="images/GeoQuakes.png"
+                alt="GeoQuakes"
+                class="portfolio-img"
+              />
+              <div class="portfolio-description">
+                <h4>GeoQuakes</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Culpa nam dolor dignissimos fuga libero repellat sunt ad,
+                  reprehenderit veritatis, ut vero et. Quis modi unde corporis
+                  excepturi autem iste sapiente quisquam sequi dicta sed nam
+                  enim, suscipit accusantium temporibus impedit.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
         <section id="contact" class="scroll-block">
-          <h2>CONTACT</h2>
-          <p>
-            porro nemo laudantium odio eaque id rerum incidunt, quibusdam
-            ratione facilis delectus qui molestiae quod pariatur. Praesentium
-            obcaecati culpa tenetur, placeat quisquam aspernatur corrupti
-            incidunt. Quibusdam ducimus dolor totam debitis, impedit illum
-            dolorum quae reprehenderit voluptatibus velit enim minus unde ullam
-            maiores dignissimos.
-          </p>
+          <h2>Like what you see? Get in touch!</h2>
+          <form action="POST" href="http://facebook.com" id="contact">
+            <div class="flex-row">
+              <input type="text" placeholder="FULL NAME" />
+              <input type="email" placeholder="EMAIL" />
+              <input type="text" placeholder="SUBJECT" />
+            </div>
+            <textarea
+              name="comment"
+              id="comment"
+              cols="30"
+              rows="10"
+              placeholder="COMMENT"
+            ></textarea>
+            <input type="submit" value="submit" id="submit-comment" />
+          </form>
         </section>
       </div>
     </main>

@@ -1,5 +1,6 @@
-$(document).on({
-  ready: bodyHeight()
+$(document).ready(function() {
+  bodyHeight();
+  carousel();
 });
 $(window).on({
   resize: bodyHeight
@@ -128,3 +129,40 @@ $("#hamburger-icon").click(function() {
     transition: ".4s ease-in-out"
   });
 });
+let carouselIndex;
+let portfolioIndex = 0;
+let testimonialsIndex = 0;
+function carousel() {
+  $(".carousel-buttons").click(function(event) {
+    console.log(`${event.target.parentElement.parentElement.id}`);
+    switch (event.target.parentElement.parentElement.id == portfolio) {
+      case "portfolio":
+        carouselIndex = portfolioIndex;
+        break;
+      case "testimonials":
+        carouselIndex = portfolioIndex;
+        break;
+    }
+    let carousel = event.target.parentElement.parentElement.getElementsByClassName(
+      "carousel"
+    )[0];
+    let carouselItems = event.target.parentElement.parentElement.getElementsByClassName(
+      "carousel-item"
+    );
+    if (event.target.className == "left") {
+      console.log("left");
+      portfolioIndex -= 1;
+      if (portfolioIndex < 0) {
+        portfolioIndex = carouselItems.length - 1;
+      }
+      $(carousel).css({ left: `${portfolioIndex * -100}vw` });
+    } else if (event.target.className == "right") {
+      console.log("right");
+      if (portfolioIndex > carouselItems.length - 2) {
+        portfolioIndex = -1;
+      }
+      portfolioIndex += 1;
+      $(carousel).css({ left: `${portfolioIndex * -100}vw` });
+    }
+  });
+}
