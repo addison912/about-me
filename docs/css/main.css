@@ -189,7 +189,7 @@ main {
   animation: gradientBackground 45s infinite ease-in-out;
 }
 #about p {
-  padding-right: 5vw;
+  padding: 0 5vw 5vw 0;
   max-height: 50%;
 }
 
